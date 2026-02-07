@@ -1,0 +1,74 @@
+ul {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+li{
+    list-style: circle;
+}
+.list {
+    list-style: disc;
+}
+#msg {
+    font-family: Arial, Helvetica, sans-serif;
+}
+:root {
+    --black: #000000;
+    --purple: #faf3fb;    
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--fontColor);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn {
+    position: fixed;
+    top: 40px;
+    right: 10px;
+    height: 90px;
+    width: 120px;
+    border-radius: 50%;
+    color : var(--btnFontColor);
+    background-color : var(--btnBg);
+    cursor: pointer;
+    font-size: x-large;
+    
+}
+.light-theme {
+  --bg: var(--purple);
+  --fontColor: var(--black);
+  --btnBg: var(--purple);
+  --btnFontColor: var(--black);
+}
+
+.dark-theme {
+  --bg: var(--black);
+  --fontColor: var(--purple);
+  --btnBg: var(--black);
+  --btnFontColor: var(--purple);
+}
+html { scroll-behavior: smooth; }
+/* Base link colour */
+a {
+  color: #bb00f9;   /* light purple‑pink */
+  text-decoration: none;
+}
+
+/* Hover effect */
+a:hover {
+  color: #f1cffd;   /* brighter pastel pink‑purple */
+}
+
+/* Visited links */
+a:visited {
+  color: #da7ff8;   /* slightly deeper shade */
+}
+
+/* Active (when clicking) */
+a:active {
+  color: #f3edf5;   /* soft pink flash */
+}
+
+/* Wrap text */
+p {
+  white-space: pre-wrap;
+}
