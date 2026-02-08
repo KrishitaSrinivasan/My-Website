@@ -72,3 +72,44 @@ a:active {
 p {
   white-space: pre-wrap;
 }
+/* Style for the side navigation */
+.sidenav {
+  height: 100%; /* Full-height */
+  width: 400px; /* Set the width of the side navigation */
+  position: fixed; /* Fixed position */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0; /* Stay on the left */
+  background-color: var(--purple); /* Background color */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px; /* Place content 20px from the top */
+}
+/* Style for the links inside the side navigation */
+.sidenav a {
+  padding: 6px 8px 6px 16px; /* Padding */
+  text-decoration-style: double;/* Remove underline */
+  font-size: 25px; /* Increase font size */
+  color: var(--purple); /* Link color */
+  display:ruby-base; /* Make the links appear below each other */
+}
+/* Change color on hover */
+.sidenav a:hover {
+  color: #f1cffd;   /* brighter pastel pink‑purple */
+}
+.sidenav a:visited {
+  color: #da7ff8;   /* slightly deeper shade */
+}
+.sidenav a:active {
+  color: #f3edf5;   /* soft pink flash */
+}
+/* Style for the main content */
+.main {
+  margin-left: 400px; /* Same as the width of the sidenav */
+  padding: 0px 10px; /* Some padding */
+} 
+/*on smaller screens, where the height of the sidenav is 100% instead of 100vh, remove the left margin of the main content to prevent it from being hidden behind the sidenav*/
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+  .main {margin-left: 0;}
+}
