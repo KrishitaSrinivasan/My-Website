@@ -77,7 +77,7 @@ p {
   height: 100%; /* Full-height */
   width: 400px; /* Set the width of the side navigation */
   position: fixed; /* Fixed position */
-  z-index: 1; /* Stay on top */
+  z-index: 100; /* Stay on top */
   top: 0; /* Stay at the top */
   left: 0; /* Stay on the left */
   background-color: var(--purple); /* Background color */
