@@ -9,10 +9,27 @@ switcher.addEventListener('click', function() {
     //helps to toggle the dark-theme class in the body
     document.body.classList.toggle('dark-theme');
     const className = document.body.className;
-    if(className == "light-theme"){
-        this.textContent = "dark";
-    }
-    else {
-        this.textContent = "light";
-    }
+    if (document.body.classList.contains("light-theme")) {
+  this.textContent = "Dark";
+} else {
+  this.textContent = "Light";
+}
+
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const items = document.querySelectorAll(".sidenav a");
+
+  items.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+      item.style.transform = "translateY(-6px) scale(1.08)";
+    });
+
+    item.addEventListener("mouseleave", () => {
+      item.style.transform = "translateY(0) scale(1)";
+    });
+  });
+});
+
+
+
+
