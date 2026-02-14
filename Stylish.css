@@ -261,3 +261,7 @@ color: #444;  /* darker line for dark mode */
   margin: fixed;         /* centers the site */
   background: inherit;    /* keeps your theme working */
 }
+body {
+  min-width: 199px;
+}
+
