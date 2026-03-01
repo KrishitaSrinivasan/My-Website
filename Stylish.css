@@ -1,3 +1,4 @@
+
 /* ------------------------------
    GLOBAL VARIABLES & BASE STYLES
 --------------------------------*/
@@ -11,7 +12,6 @@ body {
     color: var(--fontColor);
     font-family: Arial, Helvetica, sans-serif;
     min-width: 199px;
-    margin: 0;
 }
 
 html {
@@ -150,11 +150,8 @@ a:active {
 }
 
 .site-container {
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 20px;
-    box-sizing: border-box;
+    width: 1000px;
+    margin: 0 auto; /* centers content */
     background: inherit;
 }
 
@@ -249,73 +246,16 @@ a:active {
 }
 
 /* ------------------------------
-   RESPONSIVE BEHAVIOUR
+   RESPONSIVE FIXES
 --------------------------------*/
-
-/* Medium screens (tablets) */
-@media (max-width: 1100px) {
-    .site-container {
-        max-width: 90%;
-    }
-}
-
-/* Small screens (phones) */
-@media (max-width: 900px) {
-
-    /* Sidenav becomes top bar */
+@media screen and (max-height: 450px) {
     .sidenav {
-        position: relative;
-        width: 100%;
-        height: auto;
-        padding-bottom: 20px;
+        padding-top: 15px;
     }
-
     .sidenav a {
-        margin-left: 0;
-        text-align: center;
+        font-size: 18px;
     }
-
-    /* Content moves under sidenav */
     .main {
         margin-left: 0;
-        padding-top: 20px;
-    }
-
-    /* Vertical line disappears */
-    .fixed-vertical {
-        display: none;
-    }
-
-    /* Button moves */
-    .btn {
-        right: 20px;
-        top: 20px;
-        height: 60px;
-        width: 90px;
-        font-size: medium;
-    }
-
-    /* Text scales */
-    #name3 {
-        font-size: 50px;
-    }
-
-    #name4 {
-        font-size: 40px;
-    }
-}
-
-/* Very small screens */
-@media (max-width: 500px) {
-    .sidenav a {
-        font-size: 20px;
-    }
-
-    #name3 {
-        font-size: 40px;
-    }
-
-    #name4 {
-        font-size: 32px;
     }
 }
