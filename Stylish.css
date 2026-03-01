@@ -257,9 +257,9 @@ color: #444;  /* darker line for dark mode */
     line-height: 0.009;
 }
 .site-container {
-  width: 1000px;
-  margin-left: 0;
-  background: inherit;
+  width: 1000px;          /* choose the size you want */
+  margin: fixed;         /* centers the site */
+  background: inherit;    /* keeps your theme working */
 }
 body {
   min-width: 199px;
