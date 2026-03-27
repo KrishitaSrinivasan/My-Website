@@ -264,7 +264,7 @@ color: #444;  /* darker line for dark mode */
 body {
   min-width: 199px;
 }
-.1 {
+.change {
     transition: transform 0.2s ease;
     display: block; 
     font-size: 25px; /* Increase font size */
