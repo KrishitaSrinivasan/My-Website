@@ -37,14 +37,11 @@ async function sendMessage() {
     addUserMessage(message);
     input.value = "";
 
-    const response = await fetch("YOUR_BACKEND_URL_HERE", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: message })
-    });
-
-    const data = await response.json();
-    addBotMessage(data.reply);
+    // Fake AI delay
+    setTimeout(() => {
+        const reply = getKoraReply(message);
+        addBotMessage(reply);
+    }, 600);
 }
 
 function addUserMessage(text) {
@@ -58,12 +55,27 @@ function addBotMessage(text) {
     box.innerHTML += `<div class="bot-message">${text}</div>`;
     box.scrollTop = box.scrollHeight;
 }
-fetch("YOUR_BACKEND_URL_HERE", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ message: message })
-})
 
+// Simple built‑in responses (no backend needed)
+function getKoraReply(userText) {
+    userText = userText.toLowerCase();
+
+    if (userText.includes("hi") || userText.includes("hello")) {
+        return "Heyy! Nice to see you again ✨";
+    }
+    if (userText.includes("how are you")) {
+        return "I'm feeling sparkly today, thanks for asking 💜";
+    }
+    if (userText.includes("name")) {
+        return "I'm Kora — your digital buddy!";
+    }
+    if (userText.includes("bye")) {
+        return "Aww okay, come back soon! 💫";
+    }
+
+    // Default reply
+    return "Ooh interesting… tell me more 👀✨";
+}
 
 
 
