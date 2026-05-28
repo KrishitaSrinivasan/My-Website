@@ -58,6 +58,11 @@ function addBotMessage(text) {
     box.innerHTML += `<div class="bot-message">${text}</div>`;
     box.scrollTop = box.scrollHeight;
 }
+fetch("YOUR_BACKEND_URL_HERE", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ message: message })
+})
 
 
 
