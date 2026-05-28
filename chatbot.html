@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kora Chatbot</title>
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="style.css"> <!-- your existing CSS -->
+</head>
+
+<body class="light-theme">
+
+    <!-- SIDE NAV (your existing one) -->
+    <div class="sidenav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="projects.html">Projects</a>
+        <a href="chatbot.html">Chatbot</a>
+    </div>
+
+    <!-- FIXED VERTICAL LINE (your existing style) -->
+    <div class="fixed-vertical"></div>
+
+    <!-- MAIN CONTENT AREA -->
+    <div class="main">
+
+        <h1 id="name3">Chat with Kora ✨</h1>
+        <p id="msg">Your friendly digital buddy</p>
+
+        <div class="chat-container">
+            <div class="chat-header">Kora ✨</div>
+
+            <div class="chat-box" id="chat-box">
+                <div class="bot-message">Ooh hey! You found me 👀✨ What’s up?</div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Type something..." autocomplete="off">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>
