@@ -1,10 +1,11 @@
 //Makes JavaScript more sensitive to errors so it is easier to debug in the future
 'use strict';
 
-//helps select the variable button
+// -----------------------------
+// THEME SWITCHER
+// -----------------------------
 const switcher = document.body.querySelector('.btn');
 
-//helps conduct the click function
 switcher.addEventListener('click', function() {
     document.body.classList.toggle('light-theme');
     document.body.classList.toggle('dark-theme');
@@ -16,6 +17,9 @@ switcher.addEventListener('click', function() {
     }
 });
 
+// -----------------------------
+// SIDENAV HOVER EFFECTS
+// -----------------------------
 document.addEventListener("DOMContentLoaded", () => {
     const items = document.querySelectorAll(".sidenav a");
 
@@ -31,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // -----------------------------
-// CHATBOT FUNCTIONS (FIXED)
+// CHATBOT FUNCTIONS
 // -----------------------------
 
 function addUserMessage(text) {
@@ -75,3 +79,6 @@ async function sendMessage() {
         console.error(error);
     }
 }
+
+// ⭐ Make sendMessage available to the HTML button
+window.sendMessage = sendMessage;
