@@ -37,45 +37,22 @@ async function sendMessage() {
     addUserMessage(message);
     input.value = "";
 
-    // Fake AI delay
-    setTimeout(() => {
-        const reply = getKoraReply(message);
-        addBotMessage(reply);
-    }, 600);
+    try {
+        const response = await fetch("http://127.0.0.1:5000/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: message })
+        });
+
+        const data = await response.json();
+        addBotMessage(data.reply);
+
+    } catch (error) {
+        addBotMessage("Oops… I can’t reach my brain right now 😭 Is the Python server running?");
+        console.error(error);
+    }
 }
 
-function addUserMessage(text) {
-    const box = document.getElementById("chat-box");
-    box.innerHTML += `<div class="user-message">${text}</div>`;
-    box.scrollTop = box.scrollHeight;
-}
-
-function addBotMessage(text) {
-    const box = document.getElementById("chat-box");
-    box.innerHTML += `<div class="bot-message">${text}</div>`;
-    box.scrollTop = box.scrollHeight;
-}
-
-// Simple built‑in responses (no backend needed)
-function getKoraReply(userText) {
-    userText = userText.toLowerCase();
-
-    if (userText.includes("hi") || userText.includes("hello")) {
-        return "Heyy! Nice to see you again ✨";
-    }
-    if (userText.includes("how are you")) {
-        return "I'm feeling sparkly today, thanks for asking 💜";
-    }
-    if (userText.includes("name")) {
-        return "I'm Kora — your digital buddy!";
-    }
-    if (userText.includes("bye")) {
-        return "Aww okay, come back soon! 💫";
-    }
-
-    // Default reply
-    return "Ooh interesting… tell me more 👀✨";
-}
 
 
 
