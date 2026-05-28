@@ -1,34 +1,57 @@
 //Makes JavaScript more sensitive to errors so it is easier to debug in the future
 'use strict';
+
 //helps select the variable button
 const switcher = document.body.querySelector('.btn');
+
 //helps conduct the click function
 switcher.addEventListener('click', function() {
-     //helps to toggle the light-theme class in the body
     document.body.classList.toggle('light-theme');
-    //helps to toggle the dark-theme class in the body
     document.body.classList.toggle('dark-theme');
-    const className = document.body.className;
+
     if (document.body.classList.contains("light-theme")) {
-  this.textContent = "Dark";
-} else {
-  this.textContent = "Light";
+        this.textContent = "Dark";
+    } else {
+        this.textContent = "Light";
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const items = document.querySelectorAll(".sidenav a");
+
+    items.forEach(item => {
+        item.addEventListener("mouseenter", () => {
+            item.style.transform = "translateY(-6px) scale(1.08)";
+        });
+
+        item.addEventListener("mouseleave", () => {
+            item.style.transform = "translateY(0) scale(1)";
+        });
+    });
+});
+
+// -----------------------------
+// CHATBOT FUNCTIONS (FIXED)
+// -----------------------------
+
+function addUserMessage(text) {
+    const chatBox = document.getElementById("chat-box");
+    const msg = document.createElement("div");
+    msg.className = "user-message";
+    msg.textContent = text;
+    chatBox.appendChild(msg);
+    chatBox.scrollTop = chatBox.scrollHeight;
 }
 
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const items = document.querySelectorAll(".sidenav a");
+function addBotMessage(text) {
+    const chatBox = document.getElementById("chat-box");
+    const msg = document.createElement("div");
+    msg.className = "bot-message";
+    msg.textContent = text;
+    chatBox.appendChild(msg);
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
 
-  items.forEach(item => {
-    item.addEventListener("mouseenter", () => {
-      item.style.transform = "translateY(-6px) scale(1.08)";
-    });
-
-    item.addEventListener("mouseleave", () => {
-      item.style.transform = "translateY(0) scale(1)";
-    });
-  });
-});
 async function sendMessage() {
     const input = document.getElementById("user-input");
     const message = input.value.trim();
@@ -52,7 +75,3 @@ async function sendMessage() {
         console.error(error);
     }
 }
-
-
-
-
