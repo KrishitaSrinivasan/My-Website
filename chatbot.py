@@ -100,5 +100,21 @@ def get_kora_response(user_message):
     # If nothing matches → fallback
     return random.choice(fallbacks)
 
+from flask import Flask, request, jsonify
+from flask_cors import CORS
+from chatbot_logic import get_kora_response   # import your function
+
+app = Flask(__name__)
+CORS(app)  # allows your website to talk to Python
+
+@app.route("/chat", methods=["POST"])
+def chat():
+    data = request.get_json()
+    user_message = data.get("message", "")
+    reply = get_kora_response(user_message)
+    return jsonify({"reply": reply})
+
+if __name__ == "__main__":
+    app.run()
 
 
