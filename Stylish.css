@@ -352,3 +352,9 @@ button {
 button:hover {
     transform: translateY(-2px);
 }
+.education {
+       font-size: 29px;
+    font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-break: 0.5;
+    margin-left: 15%;
+  }
