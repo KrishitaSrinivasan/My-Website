@@ -264,3 +264,28 @@ color: #444;  /* darker line for dark mode */
 body {
   min-width: 199px;
 }
+/* Skills Page Title */
+#skills-title {
+    font-size: 40px;
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+/* Skills List */
+#skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#skills-list li {
+    margin: 10px 0;
+    font-weight: 600;
+}
+
