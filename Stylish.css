@@ -355,6 +355,6 @@ button:hover {
 #education {
     font-size: 40px;
     font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    line-break: 0.5;
+    line-height: 0.5;
     text-align: center;
   }
