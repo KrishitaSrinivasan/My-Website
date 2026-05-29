@@ -264,5 +264,125 @@ color: #444;  /* darker line for dark mode */
 body {
   min-width: 199px;
 }
+.change {
+    transition: transform 0.2s ease;
+    display: block; 
+    font-size: 25px; /* Increase font size */
+    color: #9136db; /* Link color */
+}
+.chat-container {
+    width: 450px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.dark-theme .chat-container {
+    background: #1a1a1a;
+}
+
+.chat-header {
+    background: #a83dff;
+    padding: 15px;
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    font-weight: bold;
+}
+
+.chat-box {
+    height: 420px;
+    padding: 15px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.bot-message, .user-message {
+    padding: 10px 14px;
+    margin: 10px 0;
+    border-radius: 12px;
+    max-width: 80%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.bot-message {
+    background: #f7f0fd;
+    align-self: flex-start;
+}
+
+.dark-theme .bot-message {
+    background: #3a2a4f;
+    color: white;
+}
+
+.user-message {
+    background: #d1ffd6;
+    align-self: flex-end;
+}
+
+.dark-theme .user-message {
+    background: #2f4f2f;
+    color: white;
+}
+
+.input-area {
+    display: flex;
+    border-top: 1px solid #ddd;
+}
+
+input {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 12px 20px;
+    background: #a83dff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+#education {
+    font-size: 75px;
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+}
+/* Skills Page Title */
+#skills-title {
+    font-size: 40px;
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+/* Skills List */
+#skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+
+
+#skills-list li {
+    margin: 10px 0;
+    font-weight: 600;
+}
 
 
