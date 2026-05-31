@@ -175,6 +175,28 @@ p {
   opacity: 0.6;
   flex-shrink: 0;
 }
+.fixed-vertical {
+  border-left: 1px solid rgb(0, 0, 0);
+  height: 1230px;
+  position: fixed;
+  left: 405px;
+  margin-left: -105px;
+  top: 10px;
+  bottom: 10px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+.dark-theme .fixed-vertical {
+    border-left: 2.5px solid rgb(255, 255, 255);
+   height: 1230px;
+  position: fixed;
+  left: 405px;
+  margin-left: -105px;
+  top: 10px;
+  bottom: 10px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
 .email-btn {
   display: inline-block;
   padding: 10px 20px;
