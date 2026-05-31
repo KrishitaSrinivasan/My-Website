@@ -29,7 +29,32 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+async function sendMessage() {
+    const input = document.getElementById("user-input");
+    const message = input.value.trim();
+    if (message === "") return;
 
+    addUserMessage(message);
+    input.value = "";
 
+    const response = await fetch("YOUR_BACKEND_URL_HERE", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: message })
+    });
 
+    const data = await response.json();
+    addBotMessage(data.reply);
+}
 
+function addUserMessage(text) {
+    const box = document.getElementById("chat-box");
+    box.innerHTML += `<div class="user-message">${text}</div>`;
+    box.scrollTop = box.scrollHeight;
+}
+
+function addBotMessage(text) {
+    const box = document.getElementById("chat-box");
+    box.innerHTML += `<div class="bot-message">${text}</div>`;
+    box.scrollTop = box.scrollHeight;
+}
