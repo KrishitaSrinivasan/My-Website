@@ -140,6 +140,20 @@ p {
  color: #000000;
 }
 
+
+.vertical-divider {
+  height: 100px;
+  width: 1%;
+  margin: 14px 0;        /* gap above and below */
+  background-color:var(--black);   /* light mode line */
+  opacity: 0.6;              /* slightly transparent */
+}
+
+/* Dark mode version */
+.dark-mode .vertical-divider {
+color: #444;  /* darker line for dark mode */
+  opacity: 0.7;
+}
 #name1 {
     font-size: 29px;
     font-family:Arial, Helvetica, sans-serif, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -152,28 +166,6 @@ p {
     line-height: 0.009;
     color: #9136db;
     margin-left: 15%;
-}
-.fixed-vertical {
-  border-left: 1px solid rgb(0, 0, 0);
-  height: 1230px;
-  position: fixed;
-  left: 405px;
-  margin-left: -105px;
-  top: 10px;
-  bottom: 10px;
-  opacity: 0.6;
-  flex-shrink: 0;
-}
-.dark-theme .fixed-vertical {
-    border-left: 2.5px solid rgb(255, 255, 255);
-   height: 1230px;
-  position: fixed;
-  left: 405px;
-  margin-left: -105px;
-  top: 10px;
-  bottom: 10px;
-  opacity: 0.6;
-  flex-shrink: 0;
 }
 .fixed-vertical {
   border-left: 1px solid rgb(0, 0, 0);
