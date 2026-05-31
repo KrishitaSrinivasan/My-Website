@@ -135,14 +135,14 @@ p {
   background-color: var(--black); /* Dark background for sidenav */
 }
 .vline {
-  width: 100px;
+  width: 80px;
   height: 100px;
  color: #000000;
 }
 
 
 .vertical-divider {
-  height: 100px;
+  height: 80px;
   width: 1%;
   margin: 14px 0;        /* gap above and below */
   background-color:var(--black);   /* light mode line */
